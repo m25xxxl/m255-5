@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ดาวเคราะห์</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>ดาวเคราะห์</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="about.html">เกี่ยวกับเรา</a></li>
+                <li><a href="models.html">ดาวเคราะห์</a></li>
+                <li><a href="contact.html">ติดต่อเรา</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>รายการดาวเคราะห์</h2>
+
+        <div class="bike">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Mercury_in_color_-_Prockter07-edit1.jpg" alt="Honda CBR 500R">
+            <h3>ดาวพุธ (Mercury)</h3>
+            <p>ขนาด: เส้นผ่าศูนย์กลางประมาณ 4,879 กิโลเมตร
+                ระยะห่างจากดวงอาทิตย์: 57.9 ล้านกิโลเมตร
+                คุณสมบัติ: เป็นดาวเคราะห์ที่ใกล้ดวงอาทิตย์ที่สุด ไม่มีบรรยากาศที่หนาแน่นทำให้มีอุณหภูมิที่ร้อนจัดในระหว่างวันและเย็นจัดในตอนกลางคืน</p>
+            <a href="javascript:void(0)" class="details-button" onclick="showDetails('20000000000$')">ดูรายละเอียด</a>
+        </div>
+
+        <div class="bike">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Venus_-_December_23_2016.png/200px-Venus_-_December_23_2016.png" alt="Yamaha R15">
+            <h3>ดาวศุกร์ (Venus)</h3>
+            <p>ขนาด: เส้นผ่าศูนย์กลางประมาณ 12,104 กิโลเมตร
+                ระยะห่างจากดวงอาทิตย์: 108.2 ล้านกิโลเมตร
+                คุณสมบัติ: มีก๊าซคาร์บอนไดออกไซด์เป็นส่วนใหญ่ในบรรยากาศ ทำให้เกิดปัญหาเรื่องภาวะเรือนกระจก อุณหภูมิสูงถึง 465 องศาเซลเซียส</p>
+            <a href="javascript:void(0)" class="details-button" onclick="showDetails('•3000000000000$')">ดูรายละเอียด</a>
+        </div>
+
+        <div class="bike">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Mars_23_aug_2003_hubble.jpg" alt="Kawasaki Ninja 400">
+            <h3>ดาวอังคาร (Mars)</h3>
+            <p>ขนาด: เส้นผ่าศูนย์กลางประมาณ 6,779 กิโลเมตร
+                ระยะห่างจากดวงอาทิตย์: 227.9 ล้านกิโลเมตร
+                คุณสมบัติ: เป็นดาวเคราะห์ที่มีสภาพแห้งแล้ง มีความเป็นไปได้ว่ามีชีวิตในอดีต และมีความพยายามในการสำรวจจากมนุษย์หลายครั้ง</p>
+            <a href="javascript:void(0)" class="details-button" onclick="showDetails('43000000000000$')">ดูรายละเอียด</a>
+        </div>
+
+        <div class="bike">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Jupiter_by_Cassini-Huygens.jpg" alt="Ducati Panigale V4">
+            <h3>ดาวพฤหัสบดี (Jupiter)</h3>
+            <p>ขนาด: เส้นผ่าศูนย์กลางประมาณ 139,820 กิโลเมตร
+                ระยะห่างจากดวงอาทิตย์: 778.3 ล้านกิโลเมตร
+                คุณสมบัติ: ดาวเคราะห์ที่ใหญ่ที่สุดในระบบสุริยะ มีก๊าซไฮโดรเจนและฮีเลียมเป็นหลัก มีวงแหวนและจุดแดงยักษ์ที่เป็นพายุขนาดใหญ่</p>
+            <a href="javascript:void(0)" class="details-button" onclick="showDetails('60000000000000000000$')">ดูรายละเอียด</a>
+        </div>
+    </section>
+
+    <!-- แสดงรายละเอียดเพิ่มเติม -->
+    <div id="detail-view" class="detail-view" style="display:none;">
+        <div class="detail-content">
+            <h4>รายละเอียดเพิ่มเติม:</h4>
+            <p id="detail-desc"></p>
+            <button onclick="closeDetails()">ปิดรายละเอียด</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 เว็บไซต์มอเตอร์ไซค์</p>
+    </footer>
+
+    <script>
+        function showDetails(description) {
+            document.getElementById('detail-desc').innerText = description; // แสดงข้อความที่ส่งมา
+            document.getElementById('detail-view').style.display = 'flex'; // แสดงส่วนที่มีรายละเอียด
+        }
+
+        function closeDetails() {
+            document.getElementById('detail-view').style.display = 'none'; // ซ่อนรายละเอียด
+        }
+    </script>
+</body>
+
+</html>
